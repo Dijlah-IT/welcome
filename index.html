@@ -5,27 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <title>welcome</title>
   </head>
   <body>
     <main id="main">
-      <swiper-container
-        class="carousel"
-        effect="fade"
-        speed="1500"
-        autoplay-delay="5000"
-        loop="true"
-      >
-        <swiper-slide>
-          <img src="./img/sadr-1.jpg" alt="" />
-        </swiper-slide>
-        <swiper-slide>
-          <img src="./img/sadr-2.jpg" alt="" />
-        </swiper-slide>
-      </swiper-container>
+      <div class="swiper carousel">
+        <div class="swiper-wrapper">
+          <img class="swiper-slide" src="s-sadr1.jpg" alt="" />
+          <img class="swiper-slide" src="s-sadr2.jpg" alt="" />
+          <img class="swiper-slide" src="s-sadr3.jpg" alt="" />
+        </div>
+      </div>
+
       <div class="mouse-scroll">
         <div class="mouse">
           <div class="wheel"></div>
@@ -41,12 +39,7 @@
       </audio>
     </main>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
-  <script>
-    const player = new Plyr(".audio-player", {
-      controls: ["play"],
-      autoplay: true,
-    });
-  </script>
+  <script src="app.js"></script>
 </html>
