@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>welcome</title>
+  </head>
+  <body>
+    <main id="main">
+      <swiper-container
+        class="carousel"
+        effect="fade"
+        speed="1500"
+        autoplay-delay="5000"
+        loop="true"
+      >
+        <swiper-slide>
+          <img src="./img/sadr-1.jpg" alt="" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="./img/sadr-2.jpg" alt="" />
+        </swiper-slide>
+      </swiper-container>
+      <div class="mouse-scroll">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <div class="mouse-scroll__arrows">
+          <div class="mouse-scroll__arrow unu"></div>
+          <div class="mouse-scroll__arrow doi"></div>
+          <div class="mouse-scroll__arrow trei"></div>
+        </div>
+      </div>
+      <audio class="audio-player" autoplay>
+        <source src="./music.mp3" type="audio/mp3" />
+      </audio>
+    </main>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <script>
+    const player = new Plyr(".audio-player", {
+      controls: ["play"],
+      autoplay: true,
+    });
+  </script>
+</html>
