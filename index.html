@@ -18,9 +18,9 @@
     <main id="main">
       <div class="swiper carousel">
         <div class="swiper-wrapper">
-          <img class="swiper-slide" src="s-sadr1.jpg" alt="" />
-          <img class="swiper-slide" src="s-sadr2.jpg" alt="" />
-          <img class="swiper-slide" src="s-sadr3.jpg" alt="" />
+          <div class="swiper-slide"><img src="s-sadr1.jpg" alt="" /></div>
+          <div class="swiper-slide"><img src="s-sadr2.jpg" alt="" /></div>
+          <div class="swiper-slide"><img src="s-sadr3.jpg" alt="" /></div>
         </div>
       </div>
 
@@ -34,12 +34,28 @@
           <div class="mouse-scroll__arrow trei"></div>
         </div>
       </div>
-      <audio class="audio-player" autoplay>
-        <source src="./music.mp3" type="audio/mp3" />
+      <audio crossorigin playsinline class="audio-player" autoplay>
+        <source src="music.mp3" type="audio/mp3" />
       </audio>
     </main>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
-  <script src="app.js"></script>
+  <script>
+    const swiper = new Swiper(".carousel", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      effect: "fade",
+      speed: 1500,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+    });
+
+    const player = new Plyr(".audio-player", {
+      controls: ["play"],
+      autoplay: true,
+    });
+  </script>
 </html>

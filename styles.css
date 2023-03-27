@@ -77,12 +77,15 @@ video {
   right: 0;
 }
 
-img.swiper-slide {
+.swiper-slide > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   scale: 1;
-  transition: scale 75s;
+  transition: scale 60s;
+}
+.swiper-slide.swiper-slide-active > img {
+  scale: 2;
 }
 
 /*  */
