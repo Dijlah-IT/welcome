@@ -23,12 +23,21 @@
     <main id="main">
       <div class="swiper carousel">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="s-sadr1.jpg" alt="" /></div>
-          <div class="swiper-slide"><img src="s-sadr2.jpg" alt="" /></div>
-          <div class="swiper-slide"><img src="s-sadr3.jpg" alt="" /></div>
+          <div class="swiper-slide">
+            <img src="s-sadr1.jpg" alt="" />
+            <h1 class="title">بسم الله الرحمن الرحیم</h1>
+          </div>
+          <div class="swiper-slide">
+            <img src="s-sadr2.jpg" alt="" />
+            <h1 class="title">بسم الله الرحمن الرحیم سه</h1>
+          </div>
+          <div class="swiper-slide">
+            <img src="s-sadr3.jpg" alt="" />
+            <h1 class="title">بسم الله الرحمن الرحیم دو</h1>
+          </div>
         </div>
       </div>
-      <h1 class="title">بسم الله الرحمن الرحیم</h1>
+
       <div class="mouse-scroll">
         <div class="mouse">
           <div class="wheel"></div>
@@ -39,7 +48,14 @@
           <div class="mouse-scroll__arrow trei"></div>
         </div>
       </div>
-      <audio crossorigin playsinline class="audio-player" autoplay>
+      <audio
+        crossorigin
+        playsinline
+        class="audio-player"
+        autoplay
+        allow="autoplay"
+        muted="muted"
+      >
         <source src="music.mp3" type="audio/mp3" />
       </audio>
     </main>
@@ -61,6 +77,10 @@
     const player = new Plyr(".audio-player", {
       controls: ["play"],
       autoplay: true,
+    });
+
+    window.addEventListener("DOMContentLoaded", async () => {
+      await player.play();
     });
   </script>
 </html>
