@@ -24,7 +24,8 @@ body {
   min-height: 100dvh;
   position: relative;
   display: flex;
-  justify-content: center;
+
+  flex-direction: column;
 }
 
 blockquote,
@@ -62,11 +63,16 @@ video {
 }
 
 /* carousel */
-
-.carousel {
+.loader {
   width: 100%;
   height: 100vh;
   height: 100dvh;
+  position: relative;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
@@ -120,7 +126,7 @@ video {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
+  position: absolute;
   bottom: 3rem;
   right: calc(50% - 12px);
   z-index: 10;
@@ -331,7 +337,7 @@ video {
 .plyr {
   --plyr-color-main: #174d89;
   min-width: auto;
-  position: fixed;
+  position: absolute;
   z-index: 10;
   bottom: 3rem;
   left: 3rem;

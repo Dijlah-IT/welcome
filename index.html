@@ -21,36 +21,38 @@
   </head>
   <body>
     <main id="main">
-      <div class="swiper carousel">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="s-sadr1.jpg" alt="" />
-            <h1 class="title">بسم الله الرحمن الرحیم</h1>
-          </div>
-          <div class="swiper-slide">
-            <img src="s-sadr2.jpg" alt="" />
-            <h1 class="title">بسم الله الرحمن الرحیم سه</h1>
-          </div>
-          <div class="swiper-slide">
-            <img src="s-sadr3.jpg" alt="" />
-            <h1 class="title">بسم الله الرحمن الرحیم دو</h1>
+      <div class="loader">
+        <div class="swiper carousel">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="s-sadr1.jpg" alt="" />
+              <h1 class="title">بسم الله الرحمن الرحیم</h1>
+            </div>
+            <div class="swiper-slide">
+              <img src="s-sadr2.jpg" alt="" />
+              <h1 class="title">بسم الله الرحمن الرحیم سه</h1>
+            </div>
+            <div class="swiper-slide">
+              <img src="s-sadr3.jpg" alt="" />
+              <h1 class="title">بسم الله الرحمن الرحیم دو</h1>
+            </div>
           </div>
         </div>
+        <a href="#content" class="mouse-scroll">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <div class="mouse-scroll__arrows">
+            <div class="mouse-scroll__arrow unu"></div>
+            <div class="mouse-scroll__arrow doi"></div>
+            <div class="mouse-scroll__arrow trei"></div>
+          </div>
+        </a>
+        <audio crossorigin class="audio-player" autoplay playsinline>
+          <source src="sadr.mp3" type="audio/mp3" />
+        </audio>
       </div>
-
-      <div class="mouse-scroll">
-        <div class="mouse">
-          <div class="wheel"></div>
-        </div>
-        <div class="mouse-scroll__arrows">
-          <div class="mouse-scroll__arrow unu"></div>
-          <div class="mouse-scroll__arrow doi"></div>
-          <div class="mouse-scroll__arrow trei"></div>
-        </div>
-      </div>
-      <audio crossorigin class="audio-player" autoplay playsinline>
-        <source src="sadr.mp3" type="audio/mp3" />
-      </audio>
+      <div class="content" id="content" style="min-height: 200rem"></div>
     </main>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
