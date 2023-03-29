@@ -48,15 +48,8 @@
           <div class="mouse-scroll__arrow trei"></div>
         </div>
       </div>
-      <audio
-        crossorigin
-        playsinline
-        class="audio-player"
-        autoplay
-        allow="autoplay"
-        muted="muted"
-      >
-        <source src="music.mp3" type="audio/mp3" />
+      <audio crossorigin class="audio-player" autoplay playsinline>
+        <source src="sadr.mp3" type="audio/mp3" />
       </audio>
     </main>
   </body>
@@ -76,11 +69,6 @@
 
     const player = new Plyr(".audio-player", {
       controls: ["play"],
-      autoplay: true,
-    });
-
-    window.addEventListener("DOMContentLoaded", async () => {
-      await player.play();
     });
   </script>
 </html>
